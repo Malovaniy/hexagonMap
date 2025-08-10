@@ -10,6 +10,6 @@ export class HexagonService {
   private readonly http = inject(HttpClient);
 
   getHexagons() {
-    return this.http.get('/assets/data.json') as Observable<GeoJson>;
+    return this.http.get('hexagonMap/assets/data.json') as Observable<GeoJson>;
   }
 }
