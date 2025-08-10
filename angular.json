@@ -52,7 +52,7 @@
             },
             "github-pages": {
               "outputPath": "docs",
-              "baseHref": "/hexagon-map/",
+              "baseHref": "/hexagonMap/",
               "outputHashing": "none"
             },
             "development": {
