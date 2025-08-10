@@ -1,59 +1,76 @@
-# HexagonMap
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+# Hexagon Map
 
-## Development server
+A visual map interface built with Angular. You can preview the project live on GitHub Pages:  
+🔗 [Live Demo](https://malovaniy.github.io/hexagon-map/)
 
-To start a local development server, run:
+## 🚀 Getting Started Locally
 
-```bash
-ng serve
-```
+To run the project on your local machine, follow these steps:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 1. Clone the Repository
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+First, download the project files by cloning the repository:
 
 ```bash
-ng generate component component-name
+git clone https://github.com/malovaniy/hexagon-map.git
+cd hexagon-map
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 2. Install Dependencies
+
+Use npm to install all required modules:
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
+### 3. Build the Project
 
-To build the project run:
+Compile the Angular project using the Angular CLI:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This will generate the build artifacts in the `dist/` directory.
 
-## Running unit tests
+### 4. Start the Development Server
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Launch the local development server:
+
+```bash
+ng serve
+```
+
+Once the server is running, open your browser and go to:
+
+```
+http://localhost:4200/
+```
+
+The application will automatically reload if you make changes to the source files.
+
+## 🧪 Testing
+
+### Unit Tests
+
+To run unit tests using [Karma](https://karma-runner.github.io):
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+### End-to-End Tests
 
-For end-to-end (e2e) testing, run:
+To run e2e tests (you may need to configure a testing framework):
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📚 Additional Resources
 
-## Additional Resources
+For more information on Angular CLI commands and usage, visit the  
+👉 [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
