@@ -296,7 +296,7 @@ export class hexagonMapComponent implements OnInit, OnDestroy {
     hexagonFeatures: GeoFeature<PolygonGeometry, { color: string }>[]
   ): void {
     const googleMap = this.googleMap()?.googleMap!;
-    hexagonFeatures.forEach((feature, index) => {
+    hexagonFeatures.forEach((feature) => {
       const paths = feature.geometry.coordinates[0].map(([lng, lat]) => ({
         lat,
         lng,
@@ -307,38 +307,12 @@ export class hexagonMapComponent implements OnInit, OnDestroy {
         strokeOpacity: 0.5,
         strokeWeight: 1,
         fillColor: feature.properties.color,
-        fillOpacity: 0,
+        fillOpacity: 0.6,
         map: googleMap,
       });
-      timer(index * 5)
-        .pipe(takeUntil(this.destroy$))
-        .subscribe(() => {
-          const targetOpacity = 0.6;
-          const animationDuration = 300;
-          const frameRate = 60;
-          const totalFrames = (animationDuration / 1000) * frameRate;
-          const opacityStep = targetOpacity / totalFrames;
-          const animationSubscription = interval(1000 / frameRate)
-            .pipe(
-              take(totalFrames),
-              map((frame: number) => frame * opacityStep),
-              takeUntil(this.destroy$)
-            )
-            .subscribe({
-              next: (opacity: number) => {
-                polygon.setOptions({
-                  fillOpacity: Math.min(opacity, targetOpacity),
-                });
-              },
-              complete: () => {
-                polygon.setOptions({ fillOpacity: targetOpacity });
-              },
-            });
-          this.currentPolygons.push({
-            polygon,
-            animationSubscription,
-          });
-        });
+      this.currentPolygons.push({
+        polygon,
+      });
     });
   }
 }
